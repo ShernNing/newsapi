@@ -43,26 +43,29 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <div className='App'>
-        <Container maxWidth='md'>
-          <div>
-            <Navbar setCategory={setCategory} setSearch={setSearch} />
-          </div>
-          {error ? `Error: ${error.message}, Failed to fetch` : null}
-          <div>
-            {filterNews.map((data, key) => (
-              <NewsCards data={data} key={key} />
-            ))}
-            <button
-              className='button'
-              onClick={() => setLoadMore(loadMore + 10)}
-            >
-              Load More
-            </button>
-          </div>
-        </Container>
-        <ScrollToTop smooth={true} top={1000} className='scroll' />
-      </div>
+      {error ? (
+        `Error: ${error.message}, Failed to fetch`
+      ) : (
+        <div className='App'>
+          <Container maxWidth='md'>
+            <div>
+              <Navbar setCategory={setCategory} setSearch={setSearch} />
+            </div>
+            <div>
+              {filterNews.map((data, key) => (
+                <NewsCards data={data} key={key} />
+              ))}
+              <button
+                className='button'
+                onClick={() => setLoadMore(loadMore + 10)}
+              >
+                Load More
+              </button>
+            </div>
+          </Container>
+          <ScrollToTop smooth={true} top={1000} className='scroll' />
+        </div>
+      )}
     </ThemeProvider>
   );
 }
