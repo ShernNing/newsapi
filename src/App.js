@@ -55,7 +55,7 @@ function App() {
             ))}
             <button
               className='button'
-              onClick={() => setLoadMore(loadMore + 5)}
+              onClick={() => setLoadMore(loadMore + 10)}
             >
               Load More
             </button>
