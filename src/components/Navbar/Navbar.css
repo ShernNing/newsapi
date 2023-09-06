@@ -6,7 +6,7 @@
 }
 
 .logo-div {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .search {
@@ -20,7 +20,6 @@
 
 .search:focus {
   background: #646cff;
-  border: 2px solid white;
   color: white;
 }
 

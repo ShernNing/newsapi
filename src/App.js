@@ -5,6 +5,7 @@ import { Container } from "@mui/material";
 import Navbar from "./components/Navbar/Navbar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   const darkTheme = createTheme({
@@ -14,7 +15,7 @@ function App() {
   });
 
   const [news, setNews] = useState([]);
-  const [loadMore, setLoadMore] = useState(5);
+  const [loadMore, setLoadMore] = useState(10);
   const [category, setCategory] = useState("technology");
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
@@ -67,6 +68,7 @@ function App() {
             </button>
           </div>
         </Container>
+        <ScrollToTop smooth={true} top={1000} className='scroll' />
       </div>
     </ThemeProvider>
   );

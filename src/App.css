@@ -44,3 +44,12 @@ button:hover {
 .hamburger:hover {
   color: #646cffaa;
 }
+
+.scroll {
+  border-radius: 100% !important;
+  background: #646cff !important;
+}
+
+.scroll:hover {
+  background: white !important;
+}
