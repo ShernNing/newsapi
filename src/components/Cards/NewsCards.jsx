@@ -22,6 +22,7 @@ function NewsCards({ data }) {
           {data.source.name}
         </a>
       </h3>
+      <h3 className='time'>{data.publishedAt}</h3>
     </div>
   );
 }

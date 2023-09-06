@@ -48,3 +48,9 @@ a {
   text-decoration: none;
   align-self: flex-start;
 }
+
+.time {
+  align-self: flex-start;
+  margin: 0;
+  font-size: 0.6rem;
+}

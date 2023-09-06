@@ -16,7 +16,7 @@ function App() {
 
   const [news, setNews] = useState([]);
   const [loadMore, setLoadMore] = useState(10);
-  const [category, setCategory] = useState("technology");
+  const [category, setCategory] = useState("general");
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
 
@@ -34,8 +34,8 @@ function App() {
     getNews().catch((error) => setError(error));
   }, [loadMore, category]);
 
-  const filterNews = news.filter((news) =>
-    news.title.toLowerCase().includes(search)
+  const filterNews = news.filter((data) =>
+    data.title.toLowerCase().includes(search)
   );
 
   console.log(filterNews, "filterNews");
