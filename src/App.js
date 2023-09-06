@@ -47,13 +47,6 @@ function App() {
         <Container maxWidth='md'>
           <div>
             <Navbar setCategory={setCategory} setSearch={setSearch} />
-            {/* <form>
-              <input
-                type='text'
-                placeholder='Search..'
-                onChange={(e) => setSearch(e.target.value)}
-              />
-            </form> */}
           </div>
           {error ? `Error: ${error.message}, Failed to fetch` : null}
           <div>

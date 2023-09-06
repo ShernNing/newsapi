@@ -73,32 +73,36 @@ export default function SwipeableTemporaryDrawer({ setCategory, setSearch }) {
 
   return (
     <div className='nav'>
-      {["left"].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>
-            <MenuIcon className='hamburger' />
-          </Button>
-          <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
-          >
-            {list(anchor)}
-          </SwipeableDrawer>
-        </React.Fragment>
-      ))}
+      <div className='hamburger'>
+        {["left"].map((anchor) => (
+          <React.Fragment key={anchor}>
+            <Button onClick={toggleDrawer(anchor, true)}>
+              <MenuIcon className='hamburger' />
+            </Button>
+            <SwipeableDrawer
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+              onOpen={toggleDrawer(anchor, true)}
+            >
+              {list(anchor)}
+            </SwipeableDrawer>
+          </React.Fragment>
+        ))}
+      </div>
       <div className='logo-div'>
         <a href='/'>
           <img className='logo' src={news} alt={news} />
         </a>
       </div>
-      <input
-        className='search'
-        type='text'
-        placeholder='Search..'
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <div className='searchBox'>
+        <input
+          className='search'
+          type='text'
+          placeholder='Search..'
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
     </div>
   );
 }
