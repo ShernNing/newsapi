@@ -17,6 +17,7 @@ function App() {
   const [loadMore, setLoadMore] = useState(5);
   const [category, setCategory] = useState("technology");
   const [error, setError] = useState("");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const getNews = async () => {
@@ -32,17 +33,30 @@ function App() {
     getNews().catch((error) => setError(error));
   }, [loadMore, category]);
 
+  const filterNews = news.filter((news) =>
+    news.title.toLowerCase().includes(search)
+  );
+
+  console.log(filterNews, "filterNews");
+
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className='App'>
         <Container maxWidth='md'>
           <div>
-            <Navbar setCategory={setCategory} />
+            <Navbar setCategory={setCategory} setSearch={setSearch} />
+            {/* <form>
+              <input
+                type='text'
+                placeholder='Search..'
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </form> */}
           </div>
           {error ? `Error: ${error.message}, Failed to fetch` : null}
           <div>
-            {news.map((data, key) => (
+            {filterNews.map((data, key) => (
               <NewsCards data={data} key={key} />
             ))}
             <button

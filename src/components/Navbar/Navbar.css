@@ -8,3 +8,22 @@
 .logo-div {
   margin: 0 auto;
 }
+
+.search {
+  border-radius: 10px;
+  border: 2px solid #646cff;
+  background: white;
+  color: #646cff;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.search:focus {
+  background: #646cff;
+  border: 2px solid white;
+  color: white;
+}
+
+.search:focus::placeholder {
+  color: white;
+}

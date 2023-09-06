@@ -18,7 +18,7 @@ import FeedIcon from "@mui/icons-material/Feed";
 import "./Navbar.css";
 
 //added setCategory prop
-export default function SwipeableTemporaryDrawer({ setCategory }) {
+export default function SwipeableTemporaryDrawer({ setCategory, setSearch }) {
   const [state, setState] = React.useState({
     left: false,
   });
@@ -93,6 +93,12 @@ export default function SwipeableTemporaryDrawer({ setCategory }) {
           <img className='logo' src={news} alt={news} />
         </a>
       </div>
+      <input
+        className='search'
+        type='text'
+        placeholder='Search..'
+        onChange={(e) => setSearch(e.target.value)}
+      />
     </div>
   );
 }
