@@ -5,20 +5,24 @@
   margin-top: 2rem;
 }
 
-.hamburger {
-  border: 2px solid lightgreen;
+.hamburger-left {
   flex: 1;
+  display: flex;
+  justify-content: start;
 }
 
 .logo-div {
   margin: 0 auto;
-  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 }
 
 .searchBox {
-  border: 2px solid lightpink;
   flex: 1;
+  display: flex;
+  justify-content: end;
 }
 
 .search {

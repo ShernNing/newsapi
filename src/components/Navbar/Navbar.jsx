@@ -73,7 +73,7 @@ export default function SwipeableTemporaryDrawer({ setCategory, setSearch }) {
 
   return (
     <div className='nav'>
-      <div className='hamburger'>
+      <div className='hamburger-left'>
         {["left"].map((anchor) => (
           <React.Fragment key={anchor}>
             <Button onClick={toggleDrawer(anchor, true)}>
