@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 2px solid white; */
+  border-radius: 10px;
+  margin: 2rem 0 5rem 0;
+  padding: 0.5rem;
+}
+
+.image {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.desc {
+  font-size: 1.5rem;
+}
+
+.more {
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.more,
+.desc,
+.title {
+  align-self: flex-start;
+}
+
+.source {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+.source:hover {
+  color: #535bf2;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  align-self: flex-start;
+}

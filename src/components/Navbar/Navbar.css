@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.logo-div {
+  margin: 0 auto;
+}
